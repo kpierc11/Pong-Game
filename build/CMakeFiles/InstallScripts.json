@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/cmake_install.cmake",
+		"C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

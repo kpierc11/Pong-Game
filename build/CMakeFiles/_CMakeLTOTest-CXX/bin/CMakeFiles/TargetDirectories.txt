@@ -1,0 +1,4 @@
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/foo.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/boo.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/ALL_BUILD.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/CMakeFiles/_CMakeLTOTest-CXX/bin/CMakeFiles/ZERO_CHECK.dir

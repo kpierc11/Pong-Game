@@ -1,0 +1,43 @@
+# CMake build directories
+/build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+install/
+
+# IDE specific files (if applicable)
+.idea/ # For CLion
+.vscode/ # For VS Code (if not shared)
+*.vcproj.*.user
+*.vcxproj.user
+*.sln.Ghost
+*.suo
+*.user
+*.ncb
+*.opensdf
+*.sdf
+*.tlog
+*.log
+
+# Executables and libraries
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Object files and intermediate build files
+*.o
+*.obj
+*.lo
+*.la
+*.gcno
+*.gcov
+
+# Other common temporary files
+*.swp
+*~
+.#*
+*.bak
+*.tmp

@@ -1,0 +1,10 @@
+^C:\USERS\KALEB\DOCUMENTS\GITHUB\PONG-GAME\BUILD\_DEPS\SDL3-SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kaleb/Documents/GitHub/Pong-Game -BC:/Users/Kaleb/Documents/GitHub/Pong-Game/build --check-stamp-file C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\f20dfba55b6c0dccd88230a09834de5b\sdl3-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\5cb87ab8d996de96838ab4648ef1b270\sdl3-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\0f478811b1df7adb9d8eee7f21e0764d\sdl3-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\build\_deps\sdl3-subbuild\CMakeFiles\sdl3-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{8E476A69-4C42-3314-9F8F-3AE961296D21}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

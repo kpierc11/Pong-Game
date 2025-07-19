@@ -1,0 +1,7 @@
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/CMakeFiles/PongGame.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3_test.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL_uclibc.dir
+C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/ALL_BUILD.dir

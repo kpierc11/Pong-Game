@@ -1,0 +1,10 @@
+^C:\USERS\KALEB\DOCUMENTS\GITHUB\PONG-GAME\BUILD\_DEPS\SDL3-SUBBUILD\CMAKEFILES\0F478811B1DF7ADB9D8EEE7F21E0764D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild -BC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/sdl3-populate.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

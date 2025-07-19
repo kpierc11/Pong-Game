@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/sdl3-populate"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/0f478811b1df7adb9d8eee7f21e0764d/sdl3-populate.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/5cb87ab8d996de96838ab4648ef1b270/sdl3-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-subbuild/CMakeFiles/f20dfba55b6c0dccd88230a09834de5b/sdl3-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sdl3-populate"
+		],
+		"name" : "sdl3-populate"
+	}
+}
