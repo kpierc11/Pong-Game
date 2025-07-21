@@ -5,7 +5,7 @@
 		"commands" : [],
 		"files" : 
 		[
-			"build/_deps/sdl3-src/CMakeLists.txt"
+			"CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -17,29 +17,32 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"id" : "SDL3_test::@405c074760d2f6728126"
 		},
 		{
-			"id" : "SDL3_test::@405c074760d2f6728126"
+			"id" : "PongGame::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "SDL3-shared::@405c074760d2f6728126"
 		},
 		{
 			"id" : "SDL_uclibc::@405c074760d2f6728126"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"folder" : 
 	{
 		"name" : "CMakePredefinedTargets"
 	},
-	"id" : "ALL_BUILD::@405c074760d2f6728126",
+	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
 	"isGeneratorProvided" : true,
 	"name" : "ALL_BUILD",
 	"paths" : 
 	{
-		"build" : "_deps/sdl3-build",
-		"source" : "build/_deps/sdl3-src"
+		"build" : ".",
+		"source" : "."
 	},
 	"sources" : [],
 	"type" : "UTILITY"

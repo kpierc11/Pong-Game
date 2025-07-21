@@ -1369,11 +1369,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 2,
 			"id" : "SDL_uclibc::@405c074760d2f6728126"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "SDL3-shared::@405c074760d2f6728126",

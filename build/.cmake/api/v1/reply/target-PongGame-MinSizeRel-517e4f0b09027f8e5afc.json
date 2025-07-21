@@ -38,31 +38,31 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 50,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 54,
+				"line" : 55,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 39,
+				"line" : 40,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 49,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 35,
+				"line" : 36,
 				"parent" : 0
 			}
 		]
@@ -121,18 +121,19 @@
 			},
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 3,
 			"id" : "SDL3-shared::@405c074760d2f6728126"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "PongGame::@6890427a1f51a3e7e1df",
@@ -177,7 +178,8 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
@@ -187,6 +189,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/game.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

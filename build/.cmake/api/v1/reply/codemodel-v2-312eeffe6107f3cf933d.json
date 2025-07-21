@@ -84,28 +84,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Debug-07cbacc6292d5b483d5f.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-2d4e29b399402984e28f.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@405c074760d2f6728126",
-					"jsonFile" : "target-ALL_BUILD-Debug-ed2a380f1ee62f940b35.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-50ed61f005221df79fb9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "PongGame::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PongGame-Debug-0f08cfc5f18c1c8541bf.json",
+					"jsonFile" : "target-PongGame-Debug-eb0da44cdf8102f638d9.json",
 					"name" : "PongGame",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@405c074760d2f6728126",
-					"jsonFile" : "target-SDL3-shared-Debug-bfd469a06e886eb77dbd.json",
+					"jsonFile" : "target-SDL3-shared-Debug-464df435000c547c2bb0.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},
@@ -215,28 +215,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Release-07cbacc6292d5b483d5f.json",
+					"jsonFile" : "target-ALL_BUILD-Release-2d4e29b399402984e28f.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@405c074760d2f6728126",
-					"jsonFile" : "target-ALL_BUILD-Release-ed2a380f1ee62f940b35.json",
+					"jsonFile" : "target-ALL_BUILD-Release-50ed61f005221df79fb9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "PongGame::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PongGame-Release-2feb9965963ab092406b.json",
+					"jsonFile" : "target-PongGame-Release-7c34d0c073d91dae6194.json",
 					"name" : "PongGame",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@405c074760d2f6728126",
-					"jsonFile" : "target-SDL3-shared-Release-b5a5d7597791be96aa26.json",
+					"jsonFile" : "target-SDL3-shared-Release-bff4d6936096a3107c71.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},
@@ -346,28 +346,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-07cbacc6292d5b483d5f.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-2d4e29b399402984e28f.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@405c074760d2f6728126",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-ed2a380f1ee62f940b35.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-50ed61f005221df79fb9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "PongGame::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PongGame-MinSizeRel-b6d61250b499abbb6182.json",
+					"jsonFile" : "target-PongGame-MinSizeRel-517e4f0b09027f8e5afc.json",
 					"name" : "PongGame",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@405c074760d2f6728126",
-					"jsonFile" : "target-SDL3-shared-MinSizeRel-6478fed54dcbe30fefde.json",
+					"jsonFile" : "target-SDL3-shared-MinSizeRel-8d5c8a5d0457e5df35a9.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},
@@ -477,28 +477,28 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-07cbacc6292d5b483d5f.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-2d4e29b399402984e28f.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "ALL_BUILD::@405c074760d2f6728126",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-ed2a380f1ee62f940b35.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-50ed61f005221df79fb9.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "PongGame::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-PongGame-RelWithDebInfo-cd045c171999bb4f7c23.json",
+					"jsonFile" : "target-PongGame-RelWithDebInfo-33da953310f48aead428.json",
 					"name" : "PongGame",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "SDL3-shared::@405c074760d2f6728126",
-					"jsonFile" : "target-SDL3-shared-RelWithDebInfo-79f3be03c5098195405a.json",
+					"jsonFile" : "target-SDL3-shared-RelWithDebInfo-80d9d28cf2493fa22e7c.json",
 					"name" : "SDL3-shared",
 					"projectIndex" : 1
 				},

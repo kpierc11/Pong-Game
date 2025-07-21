@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "_deps/sdl3-build/MinSizeRel/SDL3.dll"
+			"path" : "_deps/sdl3-build/Debug/SDL3.dll"
 		},
 		{
-			"path" : "_deps/sdl3-build/MinSizeRel/SDL3.lib"
+			"path" : "_deps/sdl3-build/Debug/SDL3.lib"
 		},
 		{
-			"path" : "_deps/sdl3-build/MinSizeRel/SDL3.pdb"
+			"path" : "_deps/sdl3-build/Debug/SDL3.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -684,7 +684,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /O1 /Ob1 /DNDEBUG -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -Zi"
 				},
 				{
 					"backtrace" : 9,
@@ -695,7 +695,7 @@
 					"fragment" : "/W3"
 				},
 				{
-					"fragment" : "/YcC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/MinSizeRel/cmake_pch.h /FpC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/SDL3-shared.dir/MinSizeRel/cmake_pch.pch /FIC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/MinSizeRel/cmake_pch.h"
+					"fragment" : "/YcC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/Debug/cmake_pch.h /FpC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/SDL3-shared.dir/Debug/cmake_pch.pch /FIC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/Debug/cmake_pch.h"
 				}
 			],
 			"defines" : 
@@ -736,7 +736,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-minsizerel/build_config"
+					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-debug/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -781,7 +781,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /O1 /Ob1 /DNDEBUG -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -Zi"
 				},
 				{
 					"backtrace" : 9,
@@ -792,7 +792,7 @@
 					"fragment" : "/W3"
 				},
 				{
-					"fragment" : "/YuC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/MinSizeRel/cmake_pch.h /FpC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/SDL3-shared.dir/MinSizeRel/cmake_pch.pch /FIC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/MinSizeRel/cmake_pch.h"
+					"fragment" : "/YuC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/Debug/cmake_pch.h /FpC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/SDL3-shared.dir/Debug/cmake_pch.pch /FIC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/Debug/cmake_pch.h"
 				}
 			],
 			"defines" : 
@@ -833,7 +833,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-minsizerel/build_config"
+					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-debug/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1104,7 +1104,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /O1 /Ob1 /DNDEBUG -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -Zi"
 				},
 				{
 					"backtrace" : 9,
@@ -1153,7 +1153,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-minsizerel/build_config"
+					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-debug/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1198,7 +1198,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /O1 /Ob1 /DNDEBUG -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -MDd -Zi"
 				},
 				{
 					"backtrace" : 9,
@@ -1212,7 +1212,7 @@
 					"fragment" : " /GL-"
 				},
 				{
-					"fragment" : "/YuC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/MinSizeRel/cmake_pch.h /FpC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/SDL3-shared.dir/MinSizeRel/cmake_pch.pch /FIC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/MinSizeRel/cmake_pch.h"
+					"fragment" : "/YuC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/Debug/cmake_pch.h /FpC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/SDL3-shared.dir/Debug/cmake_pch.pch /FIC:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/Debug/cmake_pch.h"
 				}
 			],
 			"defines" : 
@@ -1253,7 +1253,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-minsizerel/build_config"
+					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-debug/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1298,7 +1298,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DWIN32"
+					"fragment" : "-DWIN32 -D_DEBUG"
 				}
 			],
 			"defines" : 
@@ -1339,7 +1339,7 @@
 			[
 				{
 					"backtrace" : 19,
-					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-minsizerel/build_config"
+					"path" : "C:/Users/Kaleb/Documents/GitHub/Pong-Game/build/_deps/sdl3-build/include-config-debug/build_config"
 				},
 				{
 					"backtrace" : 19,
@@ -1369,11 +1369,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 2,
 			"id" : "SDL_uclibc::@405c074760d2f6728126"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "SDL3-shared::@405c074760d2f6728126",
@@ -1386,12 +1386,12 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:X86 /INCREMENTAL:NO",
+				"fragment" : "/machine:X86 /debug /INCREMENTAL",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "MinSizeRel\\SDL_uclibc.lib",
+				"fragment" : "Debug\\SDL_uclibc.lib",
 				"role" : "libraries"
 			},
 			{

@@ -29,6 +29,7 @@ endif()
 # Define your executable
 add_executable(PongGame
     src/main.cpp
+    src/game.cpp
 )
 
 # Include headers
