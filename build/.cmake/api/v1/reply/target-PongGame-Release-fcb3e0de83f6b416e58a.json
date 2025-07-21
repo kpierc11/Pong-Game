@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "RelWithDebInfo/PongGame.exe"
+			"path" : "Release/PongGame.exe"
 		},
 		{
-			"path" : "RelWithDebInfo/PongGame.pdb"
+			"path" : "Release/PongGame.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -73,7 +73,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -std:c++17 -MD -Zi"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD"
 				},
 				{
 					"backtrace" : 4,
@@ -129,11 +129,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 3,
-			"id" : "SDL3-shared::@405c074760d2f6728126"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 3,
+			"id" : "SDL3-shared::@405c074760d2f6728126"
 		}
 	],
 	"id" : "PongGame::@6890427a1f51a3e7e1df",
@@ -142,11 +142,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /O2 /Ob1 /DNDEBUG -MD -Zi",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:X86 /debug /INCREMENTAL",
+				"fragment" : "/machine:X86 /INCREMENTAL:NO",
 				"role" : "flags"
 			},
 			{
@@ -155,7 +155,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "_deps\\sdl3-build\\RelWithDebInfo\\SDL3.lib",
+				"fragment" : "_deps\\sdl3-build\\Release\\SDL3.lib",
 				"role" : "libraries"
 			},
 			{

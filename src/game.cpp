@@ -1,9 +1,11 @@
 #include "game.hpp"
+#include <cmath>
 
 bool paddleMovingNorth = false;
 bool paddleMovingSouth = false;
+bool ballHitPaddle = false;
 
-Game::Game() : m_window(nullptr), m_renderer(nullptr), m_gameRunning(true), m_paddle({}), m_speed(.05f), m_direction("")
+Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(640), m_screenHeight(480), m_gameRunning(true), m_paddle({}), m_speed(.08f), m_direction(""), m_previousFrameTime(SDL_GetTicks())
 {
 }
 
@@ -18,8 +20,8 @@ bool Game::InitGame()
 
     m_window = SDL_CreateWindow(
         "Pong Game",      // window title
-        640,              // width, in pixels
-        480,              // height, in pixels
+        m_screenWidth,    // width, in pixels
+        m_screenHeight,   // height, in pixels
         SDL_WINDOW_OPENGL // flags - see below
     );
 
@@ -41,6 +43,11 @@ bool Game::InitGame()
     m_paddle.w = 10;
     m_paddle.x = 50;
     m_paddle.y = 50;
+
+    m_ball.h = 10;
+    m_ball.w = 10;
+    m_ball.x = static_cast<float>(m_screenWidth) / 2;
+    m_ball.y = static_cast<float>(m_screenHeight) / 2;
 
     return 1;
 }
@@ -88,10 +95,10 @@ void Game::HandleInput()
                 paddleMovingSouth = true;
             }
         }
-        if(event.type == SDL_EVENT_KEY_UP)
+        if (event.type == SDL_EVENT_KEY_UP)
         {
-             paddleMovingNorth = false;
-                paddleMovingSouth = false;
+            paddleMovingNorth = false;
+            paddleMovingSouth = false;
         }
     }
 }
@@ -124,6 +131,7 @@ void Game::GenerateOutput()
     SDL_SetRenderDrawColor(m_renderer, 50, 100, 100, 255);
 
     SDL_RenderFillRect(m_renderer, &m_paddle);
+    SDL_RenderFillRect(m_renderer, &m_ball);
 
     SDL_RenderPresent(m_renderer);
 }
