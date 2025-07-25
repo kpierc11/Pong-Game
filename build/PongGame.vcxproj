@@ -422,6 +422,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\src\main.cpp" />
     <ClCompile Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\src\game.cpp" />
+    <ClCompile Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\src\paddle.cpp" />
+    <ClCompile Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\src\ball.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

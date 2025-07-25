@@ -30,6 +30,8 @@ endif()
 add_executable(PongGame
     src/main.cpp
     src/game.cpp
+    src/paddle.cpp
+    src/ball.cpp
 )
 
 # Include headers

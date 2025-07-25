@@ -1,11 +1,7 @@
 #include "game.hpp"
 #include <cmath>
 
-bool paddleMovingNorth = false;
-bool paddleMovingSouth = false;
-bool ballHitPaddle = false;
-
-Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(640), m_screenHeight(480), m_gameRunning(true), m_paddle({}), m_speed(.08f), m_direction(""), m_previousFrameTime(SDL_GetTicks())
+Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(640), m_screenHeight(480), m_gameRunning(true), m_paddle({}), m_speed(300.0f), m_direction(""), m_currentFrameTime(SDL_GetTicks()), m_previousFrameTime(0)
 {
 }
 
@@ -39,16 +35,6 @@ bool Game::InitGame()
         return 0;
     }
 
-    m_paddle.h = 100;
-    m_paddle.w = 10;
-    m_paddle.x = 50;
-    m_paddle.y = 50;
-
-    m_ball.h = 10;
-    m_ball.w = 10;
-    m_ball.x = static_cast<float>(m_screenWidth) / 2;
-    m_ball.y = static_cast<float>(m_screenHeight) / 2;
-
     return 1;
 }
 
@@ -61,11 +47,27 @@ void Game::EndGame()
 
 void Game::GameLoop()
 {
+
     while (m_gameRunning)
     {
+
+        m_currentFrameTime = SDL_GetTicks();
+        float deltaTime = (m_currentFrameTime - m_previousFrameTime) / 1000.0f;
+
+        std::cout << deltaTime << std::endl;
+
+        m_previousFrameTime = m_currentFrameTime;
+
         HandleInput();
-        UpdateGame();
+        UpdateGame(deltaTime);
         GenerateOutput();
+
+        Uint64 frameEndTime = SDL_GetTicks();
+        float frameDuration = static_cast<float>(frameEndTime - m_currentFrameTime);
+        if (frameDuration < 1000.0f / 60.0f)
+        {
+            SDL_Delay(static_cast<Uint32>((1000.0f / 60.0f) - frameDuration));
+        }
     }
 }
 
@@ -85,42 +87,26 @@ void Game::HandleInput()
         {
             if (event.key.scancode == SDL_SCANCODE_W)
             {
-                paddleMovingNorth = true;
-                paddleMovingSouth = false;
+               m_paddle.SetPaddleDirection("north");
             }
 
             if (event.key.scancode == SDL_SCANCODE_S)
             {
-                paddleMovingNorth = false;
-                paddleMovingSouth = true;
+                m_paddle.SetPaddleDirection("south");
             }
         }
         if (event.type == SDL_EVENT_KEY_UP)
         {
-            paddleMovingNorth = false;
-            paddleMovingSouth = false;
+           m_paddle.SetPaddleDirection("");
         }
     }
 }
 
-void Game::UpdateGame()
+void Game::UpdateGame(float deltaTime)
 {
 
-    if (paddleMovingNorth)
-    {
-        if (m_paddle.y >= 0)
-        {
-            m_paddle.y -= m_speed;
-        }
-    }
+    m_paddle.MovePaddle(deltaTime);
 
-    if (paddleMovingSouth)
-    {
-        if (m_paddle.y <= 480.0f - m_paddle.h)
-        {
-            m_paddle.y += m_speed;
-        }
-    }
 }
 
 void Game::GenerateOutput()
@@ -130,8 +116,7 @@ void Game::GenerateOutput()
     SDL_RenderClear(m_renderer);
     SDL_SetRenderDrawColor(m_renderer, 50, 100, 100, 255);
 
-    SDL_RenderFillRect(m_renderer, &m_paddle);
-    SDL_RenderFillRect(m_renderer, &m_ball);
-
+    SDL_RenderFillRect(m_renderer, &m_paddle.m_PongPaddle);
+    SDL_RenderFillRect(m_renderer, &m_ball.m_ball);
     SDL_RenderPresent(m_renderer);
 }

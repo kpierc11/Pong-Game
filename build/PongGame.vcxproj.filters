@@ -7,6 +7,12 @@
     <ClCompile Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\src\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\src\paddle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\src\ball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Kaleb\Documents\GitHub\Pong-Game\CMakeLists.txt" />
