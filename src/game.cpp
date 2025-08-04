@@ -87,7 +87,7 @@ void Game::HandleInput()
         {
             if (event.key.scancode == SDL_SCANCODE_W)
             {
-               m_paddle.SetPaddleDirection("north");
+                m_paddle.SetPaddleDirection("north");
             }
 
             if (event.key.scancode == SDL_SCANCODE_S)
@@ -97,7 +97,7 @@ void Game::HandleInput()
         }
         if (event.type == SDL_EVENT_KEY_UP)
         {
-           m_paddle.SetPaddleDirection("");
+            m_paddle.SetPaddleDirection("");
         }
     }
 }
@@ -106,7 +106,7 @@ void Game::UpdateGame(float deltaTime)
 {
 
     m_paddle.MovePaddle(deltaTime);
-
+    m_ball.MoveBall(deltaTime, m_paddle);
 }
 
 void Game::GenerateOutput()
