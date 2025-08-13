@@ -1,5 +1,7 @@
 # Pong-Game
 Pong Game Clone
+   <img width="637" height="506" alt="image" src="https://github.com/user-attachments/assets/5ae9c95d-d615-45b7-84be-3d8e90aaf52d" />
+
 
 ## Prerequisites
 
@@ -12,6 +14,3 @@ Pong Game Clone
    ```bash
    git clone https://github.com/kpierc11/Pong-Game.git
    cd Pong-Game
-
-   <img width="637" height="506" alt="image" src="https://github.com/user-attachments/assets/5ae9c95d-d615-45b7-84be-3d8e90aaf52d" />
-
