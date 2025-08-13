@@ -54,8 +54,6 @@ void Game::GameLoop()
         m_currentFrameTime = SDL_GetTicks();
         float deltaTime = (m_currentFrameTime - m_previousFrameTime) / 1000.0f;
 
-        std::cout << deltaTime << std::endl;
-
         m_previousFrameTime = m_currentFrameTime;
 
         HandleInput();

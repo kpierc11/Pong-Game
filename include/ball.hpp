@@ -2,6 +2,7 @@
 #include <SDL3/SDL.h>
 #include <string>
 #include "paddle.hpp"
+#include "math.hpp"
 
 class Ball
 {
@@ -16,5 +17,6 @@ private:
     std::string m_direction;
     int m_ballDirectionX;
     int m_ballDirectionY;
+    GameMath::Vector m_ballVelocity;
 };
 

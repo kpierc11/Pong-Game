@@ -5,12 +5,6 @@
 #include "ball.hpp"
 
 
-struct Vector
-{
-    float x;
-    float y;
-};
-
 class Game
 {
 
