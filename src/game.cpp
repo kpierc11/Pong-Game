@@ -1,7 +1,10 @@
 #include "game.hpp"
 #include <cmath>
+#include <SDL3_ttf/SDL_ttf.h>
 
-Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(640), m_screenHeight(480), m_gameRunning(true), m_paddle({}), m_speed(300.0f), m_direction(Direction::None), m_currentFrameTime(SDL_GetTicks()), m_previousFrameTime(0), m_textureManager({})
+    float scoreTimePassed = 0;
+
+Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(640), m_screenHeight(480), m_gameScoreCount(0), m_gameRunning(true), m_paddle({}), m_speed(300.0f), m_direction(Direction::None), m_currentFrameTime(SDL_GetTicks()), m_previousFrameTime(0), m_textureManager({}), m_scoreManager({})
 {
 }
 
@@ -35,9 +38,17 @@ bool Game::InitGame()
         return 0;
     }
 
-    SDL_Texture* text = m_textureManager.LoadTexture(m_renderer, "assets/frog.bmp");
-   
-    m_ball.SetBallTexture(text);
+    if (!TTF_Init())
+    {
+        SDL_Log("Couldn't initialize SDL_ttf: %s\n", SDL_GetError());
+        return 0;
+    }
+
+    m_scoreManager.CreateScoreTexture(m_renderer);
+
+    SDL_Texture *textureBall = m_textureManager.LoadTexture(m_renderer, "assets/frog.bmp");
+
+    m_ball.SetBallTexture(textureBall);
 
     return 1;
 }
@@ -46,6 +57,8 @@ void Game::EndGame()
 {
     SDL_DestroyRenderer(m_renderer);
     SDL_DestroyWindow(m_window);
+
+    TTF_Quit();
     SDL_Quit();
 }
 
@@ -115,6 +128,19 @@ void Game::UpdateGame(float deltaTime)
     SDL_GetMouseState(&mouseX, &mouseY);
     m_ball.MoveBall(deltaTime, m_paddle);
     m_paddle.MovePaddle(deltaTime);
+
+    scoreTimePassed += deltaTime;
+
+    if (scoreTimePassed > 2.0f)
+    {
+
+        m_gameScoreCount += 50;
+        scoreTimePassed = 0;
+
+    }
+
+    m_scoreManager.m_currentScore = m_gameScoreCount;
+    m_scoreManager.UpdateScoreTexture(m_renderer);
 }
 
 void Game::GenerateOutput()
@@ -125,7 +151,11 @@ void Game::GenerateOutput()
     SDL_SetRenderDrawColor(m_renderer, 50, 100, 100, 255);
 
     SDL_RenderFillRect(m_renderer, &m_paddle.m_PongPaddle);
-    //SDL_RenderFillRect(m_renderer, &m_ball.m_ball);
+
     SDL_RenderTexture(m_renderer, m_ball.m_ballTexture, NULL, &m_ball.m_ball);
+
+    SDL_RenderDebugText(m_renderer, 50, 50, "Score");
+    SDL_RenderTexture(m_renderer, m_scoreManager.GetTexture(), NULL, &m_scoreManager.m_scoreRect);
+
     SDL_RenderPresent(m_renderer);
 }

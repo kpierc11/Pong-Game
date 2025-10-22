@@ -5,6 +5,7 @@
 #include "ball.hpp"
 #include "direction.hpp"
 #include "TextureManager.hpp"
+#include "score.hpp"
 
 class Game
 {
@@ -26,7 +27,7 @@ private:
     SDL_Renderer *m_renderer;
     int m_screenWidth;
     int m_screenHeight;
-    int m_score;
+     int m_gameScoreCount;
     bool m_gameRunning;
     Paddle m_paddle;
     Ball m_ball;
@@ -35,4 +36,6 @@ private:
     Uint64 m_currentFrameTime;
     Uint64 m_previousFrameTime;
 	TextureManager m_textureManager;
+    Score m_scoreManager;
+   
 };
