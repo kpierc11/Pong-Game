@@ -36,6 +36,7 @@ target_sources(PongGame
         src/game.cpp
         src/ball.cpp 
         src/paddle.cpp
+        src/TextureManager.cpp
 )
 
 # Include path for any legacy headers
@@ -65,3 +66,16 @@ if (WIN32)
         VERBATIM
     )
 endif()
+
+
+# ---------------------------
+# Set Visual Studio startup project
+# ---------------------------
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
+
+# Copy assets folder to build output dir
+add_custom_command(
+    TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:${PROJECT_NAME}>/assets
+)

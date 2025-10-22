@@ -3,7 +3,8 @@
 #include <iostream>
 #include "paddle.hpp"
 #include "ball.hpp"
-
+#include "direction.hpp"
+#include "TextureManager.hpp"
 
 class Game
 {
@@ -25,11 +26,13 @@ private:
     SDL_Renderer *m_renderer;
     int m_screenWidth;
     int m_screenHeight;
+    int m_score;
     bool m_gameRunning;
     Paddle m_paddle;
     Ball m_ball;
-    std::string m_direction;
+    Direction m_direction;
     float m_speed;
     Uint64 m_currentFrameTime;
     Uint64 m_previousFrameTime;
+	TextureManager m_textureManager;
 };

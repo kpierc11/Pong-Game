@@ -6,17 +6,17 @@
 
 class Ball
 {
-    public:
+public:
     Ball();
     ~Ball();
 
     void MoveBall(float deltaTime, Paddle paddle);
-    SDL_FRect m_ball;
+    void SetBallTexture(SDL_Texture *text) { m_ballTexture = text; };
 
-private:
+    SDL_FRect m_ball;
     std::string m_direction;
     int m_ballDirectionX;
     int m_ballDirectionY;
     GameMath::Vector m_ballVelocity;
+    SDL_Texture *m_ballTexture;
 };
-

@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL3/SDL_rect.h"
 #include <string>
+#include "direction.hpp"
 
 class Paddle
 {
@@ -10,10 +11,10 @@ public:
     ~Paddle();
 
     void MovePaddle(float deltaTime);
-    void SetPaddleDirection(std::string direction) { m_direction = direction; }
-    std::string GetPaddleDirection() const { return m_direction; }
+    void SetPaddleDirection(Direction direction) { m_direction = direction; }
+    Direction GetPaddleDirection() const { return m_direction; }
     SDL_FRect m_PongPaddle;
 
 private:
-    std::string m_direction;
+    Direction m_direction;
 };
