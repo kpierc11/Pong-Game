@@ -2,9 +2,9 @@
 #include <cmath>
 #include <SDL3_ttf/SDL_ttf.h>
 
-    float scoreTimePassed = 0;
+float scoreTimePassed = 0;
 
-Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(640), m_screenHeight(480), m_gameScoreCount(0), m_gameRunning(true), m_paddle({}), m_speed(300.0f), m_direction(Direction::None), m_currentFrameTime(SDL_GetTicks()), m_previousFrameTime(0), m_textureManager({}), m_scoreManager({})
+Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(900), m_screenHeight(480), m_gameScoreCount(0), m_gameRunning(true), m_paddle({}), m_speed(300.0f), m_direction(Direction::None), m_currentFrameTime(SDL_GetTicks()), m_previousFrameTime(0), m_textureManager({}), m_scoreManager({}), m_PongBalls({})
 {
 }
 
@@ -46,15 +46,32 @@ bool Game::InitGame()
 
     m_scoreManager.CreateScoreTexture(m_renderer);
 
-    SDL_Texture *textureBall = m_textureManager.LoadTexture(m_renderer, "assets/frog.bmp");
+    SDL_Texture *textureBall = m_textureManager.LoadTexture(m_renderer, "assets/pepe-frog-head.bmp");
 
-    m_ball.SetBallTexture(textureBall);
+    for (int i = 0; i < 1; i++)
+    {
+        Ball ball;
+        ball.SetBallTexture(textureBall);
+        ball.SetGame(this);
+
+        m_PongBalls.push_back(ball);
+    }
+
+   // m_ball.SetGame(this);
+
+    char *filePath = SDL_GetPrefPath("EmberwindStudios", "PongGame");
+
+    printf(filePath);
+    WriteGameFile();
+    ReadGameFile();
 
     return 1;
 }
 
 void Game::EndGame()
 {
+    WriteGameFile();
+    ReadGameFile();
     SDL_DestroyRenderer(m_renderer);
     SDL_DestroyWindow(m_window);
 
@@ -126,7 +143,14 @@ void Game::UpdateGame(float deltaTime)
     float mouseX, mouseY;
 
     SDL_GetMouseState(&mouseX, &mouseY);
-    m_ball.MoveBall(deltaTime, m_paddle);
+
+    for (auto &ball : m_PongBalls)
+    {
+        ball.MoveBall(deltaTime, m_paddle);
+    }
+
+    //m_ball.MoveBall(deltaTime, m_paddle);
+
     m_paddle.MovePaddle(deltaTime);
 
     scoreTimePassed += deltaTime;
@@ -137,6 +161,13 @@ void Game::UpdateGame(float deltaTime)
         m_gameScoreCount += 50;
         scoreTimePassed = 0;
 
+        SDL_Texture *textureBall = m_textureManager.LoadTexture(m_renderer, "assets/pepe-frog-head.bmp");
+
+        Ball ball;
+        ball.SetBallTexture(textureBall);
+        ball.SetGame(this);
+
+        m_PongBalls.push_back(ball);
     }
 
     m_scoreManager.m_currentScore = m_gameScoreCount;
@@ -148,14 +179,78 @@ void Game::GenerateOutput()
 
     SDL_SetRenderDrawColor(m_renderer, 12, 12, 12, 255);
     SDL_RenderClear(m_renderer);
-    SDL_SetRenderDrawColor(m_renderer, 50, 100, 100, 255);
+    SDL_SetRenderDrawColor(m_renderer, 255, 255, 255, 255);
 
     SDL_RenderFillRect(m_renderer, &m_paddle.m_PongPaddle);
 
-    SDL_RenderTexture(m_renderer, m_ball.m_ballTexture, NULL, &m_ball.m_ball);
+    for (auto &ball : m_PongBalls)
+    {
+        SDL_RenderFillRect(m_renderer, &ball.m_ball);
+    }
 
     SDL_RenderDebugText(m_renderer, 50, 50, "Score");
     SDL_RenderTexture(m_renderer, m_scoreManager.GetTexture(), NULL, &m_scoreManager.m_scoreRect);
 
     SDL_RenderPresent(m_renderer);
+}
+
+void Game::ReadGameFile()
+{
+    SDL_Storage *user = SDL_OpenUserStorage("EmberwindStudios", "PongGame", 0);
+    if (user == NULL)
+    {
+        // Something bad happened!
+    }
+    while (!SDL_StorageReady(user))
+    {
+        SDL_Delay(1);
+    }
+
+    Uint64 saveLen = 0;
+    if (SDL_GetStorageFileSize(user, "save0.sav", &saveLen) && saveLen > 0)
+    {
+        void *dst = SDL_malloc(saveLen);
+        if (SDL_ReadStorageFile(user, "save0.sav", dst, saveLen))
+        {
+            // Interpret the bytes as an int
+            int loadedScore = *(int *)dst;
+
+            SDL_Log("Loaded score: %d", loadedScore);
+        }
+        else
+        {
+            // Something bad happened!
+        }
+        SDL_free(dst);
+    }
+    else
+    {
+        // Something bad happened!
+    }
+
+    SDL_CloseStorage(user);
+}
+
+void Game::WriteGameFile()
+{
+
+    SDL_Storage *user = SDL_OpenUserStorage("EmberwindStudios", "PongGame", 0);
+    if (user == NULL)
+    {
+        SDL_Log("Couldn't open user storage: %s\n", SDL_GetError());
+    }
+    while (!SDL_StorageReady(user))
+    {
+        SDL_Delay(1);
+    }
+
+    int saveData = m_gameScoreCount;
+    const void *saveDataPtr = &saveData;
+    Uint64 saveLen = sizeof(saveData);
+    if (!SDL_WriteStorageFile(user, "save0.sav", saveDataPtr, saveLen))
+    {
+
+    }
+
+    SDL_CloseStorage(user);
 }
