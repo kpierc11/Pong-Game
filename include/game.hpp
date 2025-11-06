@@ -6,6 +6,7 @@
 #include "direction.hpp"
 #include "TextureManager.hpp"
 #include "score.hpp"
+#include "aiPaddle.hpp"
 
 class Game
 {
@@ -34,6 +35,7 @@ private:
     int m_gameScoreCount;
     bool m_gameRunning;
     Paddle m_paddle;
+    AIPaddle m_aiPaddle;
     Ball m_ball;
     Direction m_direction;
     float m_speed;

@@ -17,12 +17,12 @@ void Paddle::MovePaddle(float deltaTime)
   
     if (m_direction == Direction::North && m_PongPaddle.y >= 0)
     {
-        m_PongPaddle.y -= 300.0f * deltaTime;
+        m_PongPaddle.y -= 400.0f * deltaTime;
     }
 
     if (m_direction == Direction::South && m_PongPaddle.y <= 480 - m_PongPaddle.h)
     {
-        m_PongPaddle.y += 300.0f * deltaTime;
+        m_PongPaddle.y += 400.0f * deltaTime;
     }
 
 }

@@ -4,7 +4,7 @@
 
 float scoreTimePassed = 0;
 
-Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(900), m_screenHeight(480), m_gameScoreCount(0), m_gameRunning(true), m_paddle({}), m_speed(300.0f), m_direction(Direction::None), m_currentFrameTime(SDL_GetTicks()), m_previousFrameTime(0), m_textureManager({}), m_scoreManager({}), m_PongBalls({})
+Game::Game() : m_window(nullptr), m_renderer(nullptr), m_screenWidth(900), m_screenHeight(480), m_gameScoreCount(0), m_gameRunning(true), m_paddle({}), m_aiPaddle({this}), m_speed(300.0f), m_direction(Direction::None), m_currentFrameTime(SDL_GetTicks()), m_previousFrameTime(SDL_GetTicks()), m_textureManager({}), m_scoreManager({}), m_PongBalls({})
 {
 }
 
@@ -30,7 +30,7 @@ bool Game::InitGame()
         return 0;
     }
 
-    m_renderer = SDL_CreateRenderer(m_window, "");
+    m_renderer = SDL_CreateRenderer(m_window, NULL);
 
     if (m_renderer == NULL)
     {
@@ -53,16 +53,12 @@ bool Game::InitGame()
         Ball ball;
         ball.SetBallTexture(textureBall);
         ball.SetGame(this);
-
         m_PongBalls.push_back(ball);
     }
-
-   // m_ball.SetGame(this);
 
     char *filePath = SDL_GetPrefPath("EmberwindStudios", "PongGame");
 
     printf(filePath);
-    WriteGameFile();
     ReadGameFile();
 
     return 1;
@@ -74,6 +70,15 @@ void Game::EndGame()
     ReadGameFile();
     SDL_DestroyRenderer(m_renderer);
     SDL_DestroyWindow(m_window);
+
+    for (auto &ball : m_PongBalls)
+    {
+        if (ball.m_ballTexture)
+        {
+            SDL_DestroyTexture(ball.m_ballTexture);
+            ball.m_ballTexture = nullptr;
+        }
+    }
 
     TTF_Quit();
     SDL_Quit();
@@ -93,13 +98,6 @@ void Game::GameLoop()
         HandleInput();
         UpdateGame(deltaTime);
         GenerateOutput();
-
-        // Uint64 frameEndTime = SDL_GetTicks();
-        // float frameDuration = static_cast<float>(frameEndTime - m_currentFrameTime);
-        // if (frameDuration < 1000.0f / 60.0f)
-        // {
-        //     SDL_Delay(static_cast<Uint32>((1000.0f / 60.0f) - frameDuration));
-        // }
     }
 }
 
@@ -149,15 +147,13 @@ void Game::UpdateGame(float deltaTime)
         ball.MoveBall(deltaTime, m_paddle);
     }
 
-    //m_ball.MoveBall(deltaTime, m_paddle);
-
+    m_aiPaddle.MovePaddle(deltaTime);
     m_paddle.MovePaddle(deltaTime);
 
     scoreTimePassed += deltaTime;
 
     if (scoreTimePassed > 2.0f)
     {
-
         m_gameScoreCount += 50;
         scoreTimePassed = 0;
 
@@ -182,13 +178,14 @@ void Game::GenerateOutput()
     SDL_SetRenderDrawColor(m_renderer, 255, 255, 255, 255);
 
     SDL_RenderFillRect(m_renderer, &m_paddle.m_PongPaddle);
+    SDL_RenderFillRect(m_renderer, &m_aiPaddle.m_PongPaddle);
 
     for (auto &ball : m_PongBalls)
     {
         SDL_RenderFillRect(m_renderer, &ball.m_ball);
     }
 
-    SDL_RenderDebugText(m_renderer, 50, 50, "Score");
+    //SDL_RenderDebugText(m_renderer, static_cast<float>(m_screenWidth / 2), 10, "Score");
     SDL_RenderTexture(m_renderer, m_scoreManager.GetTexture(), NULL, &m_scoreManager.m_scoreRect);
 
     SDL_RenderPresent(m_renderer);
@@ -219,14 +216,12 @@ void Game::ReadGameFile()
         }
         else
         {
-            // Something bad happened!
         }
         SDL_free(dst);
     }
     else
     {
-        // Something bad happened!
-    }
+        }
 
     SDL_CloseStorage(user);
 }
@@ -249,7 +244,6 @@ void Game::WriteGameFile()
     Uint64 saveLen = sizeof(saveData);
     if (!SDL_WriteStorageFile(user, "save0.sav", saveDataPtr, saveLen))
     {
-
     }
 
     SDL_CloseStorage(user);

@@ -54,6 +54,7 @@ target_sources(PongGame
         src/paddle.cpp
         src/TextureManager.cpp
         src/score.cpp
+        src/aiPaddle.cpp
 )
 
 target_include_directories(PongGame PRIVATE ${PROJECT_SOURCE_DIR}/include)

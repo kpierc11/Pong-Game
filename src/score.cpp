@@ -5,8 +5,8 @@ Score::Score() : m_scoreText(nullptr), m_scoreTexture(nullptr), m_currentScore(0
 {
     m_scoreRect.h = 200;
     m_scoreRect.w = 200;
-    m_scoreRect.x = 100;
-    m_scoreRect.y = 50;
+    m_scoreRect.x = 900 / 2;
+    m_scoreRect.y = 20;
 }
 
 Score::~Score()
