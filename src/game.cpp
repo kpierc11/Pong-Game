@@ -182,7 +182,7 @@ void Game::GenerateOutput()
 
     for (auto &ball : m_PongBalls)
     {
-        SDL_RenderFillRect(m_renderer, &ball.m_ball);
+        SDL_RenderTexture(m_renderer, ball.m_ballTexture, NULL, &ball.m_ball );
     }
 
     //SDL_RenderDebugText(m_renderer, static_cast<float>(m_screenWidth / 2), 10, "Score");

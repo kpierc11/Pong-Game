@@ -5,7 +5,7 @@
 
 using namespace GameMath;
 
-Ball::Ball() : m_ball{100, 100, 10, 10}, // x, y, w, h
+Ball::Ball() : m_ball{100, 100, 30, 30}, // x, y, w, h
                m_ballDirectionX(1),
                m_ballDirectionY(1),
                m_ballVelocity{1.0f, 1.0f},
